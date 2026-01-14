@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #077749;
+    height: fit-content;
+    padding: 70px 135px;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    gap: 70px;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+header .title_header {
+    width: 100%;
+    color: #fff;
+    font-family: "Press Start 2p";
+    font-size: 40px;
+    background-color: rgba(6, 93, 57, 0.34);
+    padding: 40px;
+    text-align: justify;
+    border: 1px solid #077749;
+
+    box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.25);
+}
+
+
+main {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 70px;
+}
+main .lyric img {
+    width: 459px;
+    height: 526px;
+    border: 1px solid #077749;
+
+    box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.25);
+}
+
+main .texto {
+    background-color: rgba(6, 93, 57, 0.34);
+    padding: 25px;
+    border: 1px solid #077749;
+    height: 526px;
+
+    box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.25);
+}
+main .texto p {
+    color: #fff;
+    font-family: "Share Tech Mono";
+    font-size: 20px;
+    text-align: justify;
+    line-height: 27px;
+}
+
+
+.player-cover {
+    position: relative;
+    width: 459px;
+    height: 526px;
+    overflow: hidden;
+    border: 1px solid #065c38;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.25);
+    animation: glowPulse 3.5s ease-in-out infinite;
+}
+
+.player-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    animation: pulse 3.5s ease-in-out infinite;
+    transition: transform 0.4s ease;
+}
+.player-cover:hover img {
+    transform: scale(1.05);
+}
+
+
+.player-cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #129c6358;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.player-cover:hover::after {
+    opacity: 1;
+}
+
+.now-playing {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+    font-family: "VT323";
+    font-size: 18px;
+    color: #24d68c;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 4px 8px;
+    letter-spacing: 2px;
+
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.4s ease;
+}
+
+.player-cover:hover .now-playing {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.fake-progress {
+    width: 459px;
+    height: 6px;
+    background: rgba(0,0,0,0.2);
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.fake-progress .progress {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #1ec17d;
+
+    animation: progressMove 12s linear infinite;
+}
+
+
+@keyframes progressMove {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.01);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    75% {
+        transform: scale(1.01);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 5px 5px 1px rgba(0,0,0,0.25);
+    }
+    50% {
+        box-shadow: 0 0 20px #0fa063;
+    }
+    100% {
+        box-shadow: 5px 5px 1px rgba(0,0,0,0.25);
+    }
+}
