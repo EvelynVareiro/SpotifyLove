@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fceeda;
+    padding: 80px 90px;
+    cursor: url('/assets/img/cursor.png'), auto;
+    overflow-x: hidden;
+}
+
+menu {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+menu .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+menu .logo h1 {
+    font-size: 50px;
+    font-family: "Press Start 2p";
+}
+menu .logo img {
+    width: 70px;
+}
+
+menu .outro img {
+    width: 70px;
+    animation: spin 4s linear infinite;
+}
+
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+main .message {
+    width: 100%;
+}
+main .message h3 {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "Share Tech Mono";
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.message h3::after {
+    content: "|";
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+
+main .music-cards {
+    width: 100%;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+main .music-cards .card {
+    border-top: 1px solid #2a2826;
+    border-bottom: 5px solid #2a2826;
+    border-right: 5px solid #2a2826;
+    border-left: 1px solid #2a2826;
+
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #e6ceb0;
+    padding: 8px;
+    width: 100%;
+    justify-content: space-between;
+}
+main .music-cards .card .card_info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 7px;
+    margin-top: 10px;
+}
+main .music-cards .card .card_info h2 {
+    color: #2a2826;
+    font-size: 20px;
+    font-family: "Press Start 2P";
+}
+main .music-cards .card .card_info p {
+    font-family: "Share Tech Mono";
+    font-size: 19px;
+}
+
+main .music-cards .card .card_img {
+    width: 100%;
+    border: 2px solid #2a2826;
+}
+
+main .music-cards .card .card_btn {
+    background-color: #594435;
+    color: #e6ceb0;
+    height: 45px;
+    margin-top: 5px;
+    font-family: "Share Tech Mono";
+    font-size: 15px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-in-out;
+    cursor: url('/assets/img/cursor2.png'), auto;
+
+
+    border-top: 2px solid #2a2826;
+    border-bottom: 4px solid #2a2826;
+    border-right: 4px solid #2a2826;
+    border-left: 2px solid #2a2826;
+}
+
+main .music-cards .card .card_btn:hover {
+    background-color: #81624e;
+}
+
+
+/* =========================
+   TRANSIÇÃO ENTRE PÁGINAS
+========================= */
+
+.page-transition {
+    position: fixed;
+    inset: 0;
+    background-color: #fceeda;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+    z-index: 9999;
+}
+
+.page-transition.active {
+    opacity: 1;
+}
+
+
+
+
+/* =========================
+   ANIMAÇÃO DE SCROLL (CARDS)
+========================= */
+
+.card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* quando o card aparece */
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   CD GIRANDO
+========================= */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================
+   EFEITO DIGITAÇÃO
+========================= */
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+

@@ -1,0 +1,46 @@
+## 🎞️ Paleta 1 — Retro clássico (anos 90 / web antiga)
+Ótima se o site tiver cara de HTML antigo, tabelas, pixel art, GIFs.
+
+* **Fundo principal:** `#f7e6cf` (off-white amarelado)
+* **Fundo secundário (caixas/cards):** `#e9d4b8`
+* **Texto principal:** `#3b332b`
+* **Texto secundário:** `#6c6256`
+* **Bordas / linhas:** `#c5ac8b`
+
+
+## 🖥️ Paleta 2 — Retro escuro (terminal / cyber antigo)
+Boa se você quiser um clima mais “computador antigo”, mas sem ser colorido.
+
+* **Fundo principal:** `#3a312e`
+* **Fundo secundário:** `#3c342c`
+* **Texto principal:** `#f9eddc`
+* **Texto secundário:** `#a49c8f`
+* **Bordas:** `#62584e`
+
+
+## 📼 Paleta 3 — Retro bege/cinza (minimalista e segura)
+Essa é a mais neutra de todas, quase impossível de dar conflito.
+
+* **Fundo principal:** `#f5e8d6`
+* **Fundo secundário:** `#dfcfba`
+* **Texto principal:** `#3b332c`
+* **Texto secundário:** `#5e5348`
+* **Bordas:** `#a5998a`
+
+
+## 🧾 Paleta 4 — Retro “papel velho”
+Perfeita se o site tiver textos longos, cartas, diário, nostalgia.
+
+* **Fundo principal:** `#fceeda`
+* **Fundo secundário:** `#e6ceb0`
+* **Texto principal:** `#594435`
+* **Texto secundário:** `#684f3f`
+* **Bordas:** `#bea381`
+
+
+## ⚠️ Dicas importantes pra não poluir o visual
+
+* ❌ Evite branco puro (`#FFFFFF`)
+* ❌ Evite preto puro (`#000000`)
+* ✅ Prefira **cinzas quentes**
+* ✅ Use cores fortes **só nos elementos especiais** (ícones, badges, botões específicos)
