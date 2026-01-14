@@ -15,9 +15,10 @@ body {
     height: 100vh;
     display: flex;
     overflow-x: hidden;
-    background-image: url("/assets/img/Background_Index.jpg");
+    background-image: url("../assets/img/Background_Index.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: url('../assets/img/cursor.png'), auto;
 }
 
 main {
@@ -47,7 +48,8 @@ main .start_btn {
 
     font-size: 20px;
     font-family: "Share Tech Mono";
-    color: #e6ceb0;
+    color: #e6ceb0;    
+    cursor: url('../assets/img/cursor2.png'), auto;
 }
 main .start_btn:hover {
     background-color: #684f3f;
@@ -71,4 +73,5 @@ main .start_btn:hover {
 
 .page-transition.active {
     opacity: 1;
+
 }
