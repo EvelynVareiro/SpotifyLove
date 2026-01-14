@@ -49,11 +49,11 @@ main .texto {
 
 
 main .music-cards .card .card_btn {
-    cursor: url('/assets/img/cursor2.png'), auto;
+    cursor: url('../assets/img/cursor2.png'), auto;
 }
 
 body {
-    cursor: url('/assets/img/cursor.png'), auto;
+    cursor: url('../assets/img/cursor.png'), auto;
 }
 
 
@@ -74,7 +74,7 @@ body {
     box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.25);
     -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.25);
     -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.25);
-    cursor: url('/assets/img/cursor2.png'), auto;
+    cursor: url('../assets/img/cursor2.png'), auto;
 
 
     transition: transform 0.15s steps(2, end);
@@ -83,3 +83,4 @@ body {
     transform: translate(0, 0);
     box-shadow: 2px 2px 0 #262626;
 }
+
